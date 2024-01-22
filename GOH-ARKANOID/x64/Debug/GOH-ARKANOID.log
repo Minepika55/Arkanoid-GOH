@@ -1,0 +1,98 @@
+﻿  funcionsJoc.cpp
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2182: 'Dibuixa': este uso de 'void' no es válido
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,14): error C2065: 'RenderWindow': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,28): error C2065: 'finestre': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,38): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,46): error C2065: 'bola': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,52): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,60): error C2065: 'player': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2182: 'Dibuixa': este uso de 'void' no es válido
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2374: 'Dibuixa': nueva definición; inicialización múltiple
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): message : vea la declaración de 'Dibuixa'
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,14): error C2065: 'RenderWindow': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,28): error C2065: 'finestre': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,38): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,46): error C2065: 'bola': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,52): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,60): error C2065: 'player': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(7,23): error C2065: 'x_max': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(7,30): error C2065: 'y_max': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(8,38): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(8,26): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(9,29): error C2065: 'title': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(32,18): error C2065: 'ballSpeedBase': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(33,18): error C2065: 'ballSpeedBase': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(43,9): error C2064: el término no se evalúa como una función con 3 argumentos
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.cpp(31,6): error C2365: 'Dibuixa': nueva definición; la definición anterior era 'variable de datos'
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): message : vea la declaración de 'Dibuixa'
+  GOH-ARKANOID.cpp
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2182: 'Dibuixa': este uso de 'void' no es válido
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,14): error C2065: 'RenderWindow': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,28): error C2065: 'finestre': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,38): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,46): error C2065: 'bola': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,52): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,60): error C2065: 'player': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2182: 'Dibuixa': este uso de 'void' no es válido
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2374: 'Dibuixa': nueva definición; inicialización múltiple
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): message : vea la declaración de 'Dibuixa'
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,14): error C2065: 'RenderWindow': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,28): error C2065: 'finestre': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,38): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,46): error C2065: 'bola': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,52): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,60): error C2065: 'player': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2182: 'Dibuixa': este uso de 'void' no es válido
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): error C2374: 'Dibuixa': nueva definición; inicialización múltiple
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): message : vea la declaración de 'Dibuixa'
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,14): error C2065: 'RenderWindow': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,28): error C2065: 'finestre': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,38): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,46): error C2065: 'bola': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,52): error C2065: 'Sprite': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,60): error C2065: 'player': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(7,23): error C2065: 'x_max': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(7,30): error C2065: 'y_max': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(8,38): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(8,26): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(9,29): error C2065: 'title': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(32,18): error C2065: 'ballSpeedBase': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(33,18): error C2065: 'ballSpeedBase': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(43,9): error C2064: el término no se evalúa como una función con 3 argumentos
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.cpp(31,6): error C2365: 'Dibuixa': nueva definición; la definición anterior era 'variable de datos'
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\funcionsJoc.h(10,6): message : vea la declaración de 'Dibuixa'
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(5,5): error C2084: la función 'int main(void)' ya tiene un cuerpo
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(5,5): message : vea la definición anterior de 'main'
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(7,23): error C2065: 'x_max': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(7,30): error C2065: 'y_max': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(8,38): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(8,26): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(9,29): error C2065: 'title': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(32,18): error C2065: 'ballSpeedBase': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(33,18): error C2065: 'ballSpeedBase': identificador no declarado
+D:\AluCiclesGS1\Visual Studio 2022\GOH-ARKANOID\GOH-ARKANOID\GOH-ARKANOID.cpp(43,9): error C2064: el término no se evalúa como una función con 3 argumentos
+  Generando código...
