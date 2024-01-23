@@ -64,6 +64,12 @@ int main() {
             bolaSpeedY = -bolaSpeedY;
         }
 
+        for (auto& bloc : blocs) {
+            if (spritepilota.getGlobalBounds().intersects(bloc.getGlobalBounds())) {
+                bolaSpeedY = -bolaSpeedY;
+            }
+        }
+
 
         //Moviment
         sf::Event event;
