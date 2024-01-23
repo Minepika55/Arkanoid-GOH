@@ -58,8 +58,7 @@ int main() {
     gameOverText.setCharacterSize(50);
     gameOverText.setFillColor(sf::Color::Red);
 
-
-
+    //Tot aquest codi s'executa quan la finestra esta oberta.
     while (window.isOpen()) {
         sf::Time dt = clock.restart();
         PilotaRebota(dt.asSeconds(), spritepilota, bolaSpeedX, bolaSpeedY);
