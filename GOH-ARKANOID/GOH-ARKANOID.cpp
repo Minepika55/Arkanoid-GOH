@@ -7,13 +7,13 @@ using namespace sf;
 
 
 int main() {
-    //Finestra
+    //Finestra tot aquesta part es per fer la finestra del joc.
     Vector2f viewSize(x_max, y_max);
     VideoMode vm(viewSize.x, viewSize.y);
     RenderWindow window(vm, title, Style::Default);
     window.setFramerateLimit(60);
 
-    //Definim com es la pilota
+    //Definim com es la pilota i com es mou la pilota reacciona amb el contacte amb les pareys de la finestra i els blocs.
     Texture bolaTex;
     bolaTex.loadFromFile("graphics/bola.png");
     Sprite spritepilota;
