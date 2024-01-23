@@ -37,7 +37,11 @@ int main() {
     bolaSpeedX = bolaSpeedBase * 1.7;
     sf::Clock clock;
 
-    
+    sf::Font font;
+    if (!font.loadFromFile("fonts/PLANK.TTF")) {
+       
+    }
+  
     std::vector<Sprite> blocs(numBlocs);
     Texture blocTex;
     blocTex.loadFromFile("graphics/bloc.png");
@@ -46,17 +50,17 @@ int main() {
         blocs[i].setPosition(i * 100, 50); 
     }
 
+    sf::Text gameOverText;
+    gameOverText.setFont(font);
+    gameOverText.setString("Game Over");
+    gameOverText.setCharacterSize(50);
+    gameOverText.setFillColor(sf::Color::Red);
+
 
 
     while (window.isOpen()) {
-        // Update input
-        //UpdateInput(window, spriteplayer);
-        // Update Game
         sf::Time dt = clock.restart();
-        //  Update(dt.asSeconds(), spritepilota, spriteplayer, ballSpeedX, ballSpeedY);
-          //Draw Game 
         PilotaRebota(dt.asSeconds(), spritepilota, bolaSpeedX, bolaSpeedY);
-
         Dibuixa(window, spritepilota, spriteplayer, blocs);
 
 
@@ -97,6 +101,14 @@ int main() {
             else {
                 ++it;
             }
+        }
+
+        if (spritepilota.getPosition().y >= y_max) {
+            bolaSpeedY = -bolaSpeedY;
+            gameOverText.setPosition(viewSize.x / 2, viewSize.y / 2);
+            window.draw(gameOverText);
+            window.display();
+            while (window.pollEvent(event)) {}
         }
 
 
