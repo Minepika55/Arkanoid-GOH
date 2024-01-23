@@ -42,7 +42,8 @@ int main() {
     if (!font.loadFromFile("fonts/PLANK.TTF")) {
        
     }
-  
+
+    //Aquesta part d'aqui crea els blocs a la part de dalt un al costat de l'altre.
     std::vector<Sprite> blocs(numBlocs);
     Texture blocTex;
     blocTex.loadFromFile("graphics/bloc.png");
