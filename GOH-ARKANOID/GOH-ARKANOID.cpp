@@ -1,6 +1,10 @@
+#include <iostream>
+#include <SFML/Graphics.hpp>
 #include "funcionsJoc.h"
-#include "funcionsJoc.cpp"
+#include <vector>
+
 using namespace sf;
+
 
 int main() {
     //Finestra
@@ -28,10 +32,21 @@ int main() {
     spriteplayer.setPosition(viewSize.x / 2, viewSize.y - 50);
 
     // Definim la velocitat inicial de la pilota
-    float ballSpeedX, ballSpeedY;
-    ballSpeedY = ballSpeedBase * 1;
-    ballSpeedX = ballSpeedBase * 1.7;
+    float bolaSpeedX, bolaSpeedY;
+    bolaSpeedY = bolaSpeedBase * 1;
+    bolaSpeedX = bolaSpeedBase * 1.7;
     sf::Clock clock;
+
+    
+    std::vector<Sprite> blocs(numBlocs);
+    Texture blocTex;
+    blocTex.loadFromFile("graphics/bloc.png");
+    for (int i = 0; i < numBlocs; ++i) {
+        blocs[i].setTexture(blocTex);
+        blocs[i].setPosition(i * 100, 50); 
+    }
+
+
 
     while (window.isOpen()) {
         // Update input
@@ -39,10 +54,48 @@ int main() {
         // Update Game
         sf::Time dt = clock.restart();
         //  Update(dt.asSeconds(), spritepilota, spriteplayer, ballSpeedX, ballSpeedY);
-          //Draw Game
-        Dibuixa(window, spritepilota, spriteplayer);
-        // PilotaRebota(dt.asSeconds(), spritepilota, ballSpeedX, ballSpeedY);
+          //Draw Game 
+        PilotaRebota(dt.asSeconds(), spritepilota, bolaSpeedX, bolaSpeedY);
+
+        Dibuixa(window, spritepilota, spriteplayer, blocs);
+
+
+        if (PilotaRaqueta(spritepilota, spriteplayer)) {
+            bolaSpeedY = -bolaSpeedY;
+        }
+
+
+        //Moviment
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            }
+
+            if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::Left) {
+                    spriteplayer.move(-playerSpeed, 0);
+                }
+                else if (event.key.code == sf::Keyboard::Right) {
+                    spriteplayer.move(playerSpeed, 0);
+                }
+            }
+        }
+
+        for (auto it = blocs.begin(); it != blocs.end(); ) {
+            FloatRect ballBounds = spritepilota.getGlobalBounds();
+            FloatRect blocBounds = it->getGlobalBounds();
+            if (ballBounds.intersects(blocBounds)) {
+                it = blocs.erase(it);
+            }
+            else {
+                ++it;
+            }
+        }
+
+
     }
+    
 
     return 0;
 }
