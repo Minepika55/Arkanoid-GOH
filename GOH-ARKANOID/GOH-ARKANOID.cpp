@@ -22,7 +22,7 @@ int main() {
     spritepilota.setOrigin(pilotaRect.left + pilotaRect.width / 2.0f, pilotaRect.top + pilotaRect.height / 2.0f);
     spritepilota.setPosition(viewSize.x / 2, viewSize.y / 2);
 
-    // Definim la barra del jugador
+    // Definim la barra del jugador la qual reacciona al input del jugador i es pot moure d'esquerra a dreta.
     Texture playerTex;
     playerTex.loadFromFile("graphics/raqueta.png");
     Sprite spriteplayer;
@@ -31,12 +31,13 @@ int main() {
     spriteplayer.setOrigin(playerRect.left + playerRect.width / 2.0f, playerRect.top + playerRect.height / 2.0f);
     spriteplayer.setPosition(viewSize.x / 2, viewSize.y - 50);
 
-    // Definim la velocitat inicial de la pilota
+    // Definim la velocitat inicial de la pilota a la qual es moura constantment.
     float bolaSpeedX, bolaSpeedY;
     bolaSpeedY = bolaSpeedBase * 1;
     bolaSpeedX = bolaSpeedBase * 1.7;
     sf::Clock clock;
 
+    //Aqui carrego la lletra a utilitzar per el HUD i el Game Over.
     sf::Font font;
     if (!font.loadFromFile("fonts/PLANK.TTF")) {
        
