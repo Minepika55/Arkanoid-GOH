@@ -3,6 +3,7 @@
 
 using namespace sf;
 
+// Aqui es guarden les constants del codi.
 const std::string title = "ARKANOID";
 const float bolaSpeedBase = 5.0f;
 const float playerSpeed = 20.0f;
@@ -12,7 +13,7 @@ const int incre_xr = 10, incre_yr = 10;
 const int longitut = 100, amplada = 20, radi = 25;
 const int numBlocs = 10;
 
-
+//Aqui es guarden els fragments executables que es poden adjuntar al main per fer-se servir.
 void Dibuixa(RenderWindow& finestre, Sprite& bola, Sprite& player, std::vector<Sprite>& blocs, Text PuntsMarcador);
 void PilotaRebota(float dt, Sprite& spritepilota, float& ballSpeedX, float& ballSpeedY);
 bool PilotaRaqueta(Sprite& spritepilota, Sprite& spriteplayer);
