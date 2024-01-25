@@ -1,6 +1,6 @@
 #include "funcionsJoc.h"
 
-
+//Part que s'encarrega de dibuixar les parts del joc a la finestra del joc.
 void Dibuixa(RenderWindow& finestre, Sprite& bola, Sprite& player, std::vector<Sprite>& blocs, Text PuntsMarcador) {
     finestre.clear(sf::Color::Yellow);
     finestre.draw(bola);
@@ -12,7 +12,7 @@ void Dibuixa(RenderWindow& finestre, Sprite& bola, Sprite& player, std::vector<S
     finestre.display();
 }
 
-//Per si la pilota xoca contra la paret.
+//Part que controla si la pilota xoca contra la paret.
 void PilotaRebota(float dt, Sprite& spritepilota, float& ballSpeedX, float& ballSpeedY) {
     spritepilota.move(ballSpeedX, ballSpeedY);
 
@@ -38,6 +38,7 @@ void PilotaRebota(float dt, Sprite& spritepilota, float& ballSpeedX, float& ball
 
 }
 
+//Aquesta part s'encarrega de detectar si la pilota ha xocat contra la raqueta.
 bool PilotaRaqueta(Sprite& spritepilota, Sprite& spriteplayer) {
     FloatRect pilotaBox = spritepilota.getGlobalBounds();
     FloatRect raquetaBox = spriteplayer.getGlobalBounds();
