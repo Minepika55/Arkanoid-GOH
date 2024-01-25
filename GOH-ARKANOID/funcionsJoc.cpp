@@ -1,12 +1,14 @@
 #include "funcionsJoc.h"
 
-void Dibuixa(RenderWindow& finestre, Sprite& bola, Sprite& player, std::vector<Sprite>& blocs) {
+
+void Dibuixa(RenderWindow& finestre, Sprite& bola, Sprite& player, std::vector<Sprite>& blocs, Text PuntsMarcador) {
     finestre.clear(sf::Color::Yellow);
     finestre.draw(bola);
     finestre.draw(player);
     for (auto& bloc : blocs) {
         finestre.draw(bloc);
     }
+    finestre.draw(PuntsMarcador);
     finestre.display();
 }
 

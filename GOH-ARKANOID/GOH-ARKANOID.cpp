@@ -7,6 +7,7 @@ using namespace sf;
 
 
 int main() {
+    int punts = 0;
     //Finestra tot aquesta part es per fer la finestra del joc.
     Vector2f viewSize(x_max, y_max);
     VideoMode vm(viewSize.x, viewSize.y);
@@ -40,7 +41,7 @@ int main() {
     //Aqui carrego la lletra a utilitzar per el HUD i el Game Over.
     sf::Font font;
     if (!font.loadFromFile("fonts/PLANK.TTF")) {
-       
+
     }
 
     //Aquesta part d'aqui crea els blocs a la part de dalt un al costat de l'altre.
@@ -49,20 +50,27 @@ int main() {
     blocTex.loadFromFile("graphics/bloc.png");
     for (int i = 0; i < numBlocs; ++i) {
         blocs[i].setTexture(blocTex);
-        blocs[i].setPosition(i * 100, 50); 
+        blocs[i].setPosition(i * 100, 50);
     }
 
-    sf::Text gameOverText;
-    gameOverText.setFont(font);
-    gameOverText.setString("Game Over");
-    gameOverText.setCharacterSize(50);
-    gameOverText.setFillColor(sf::Color::Red);
+    sf::Text GameOverMarcador;
+    GameOverMarcador.setFont(font);
+    GameOverMarcador.setString("Game Over");
+    GameOverMarcador.setCharacterSize(50);
+    GameOverMarcador.setFillColor(sf::Color::Red);
+
+    sf::Text PuntsMarcador;
+    PuntsMarcador.setFont(font);
+    PuntsMarcador.setString("Punts: " + std::to_string(punts));
+    PuntsMarcador.setCharacterSize(30);
+    PuntsMarcador.setFillColor(sf::Color::Blue);
+    PuntsMarcador.setPosition(viewSize.x / 80, viewSize.y / -200);
+
 
     //Tot aquest codi s'executa quan la finestra esta oberta.
     while (window.isOpen()) {
         sf::Time dt = clock.restart();
         PilotaRebota(dt.asSeconds(), spritepilota, bolaSpeedX, bolaSpeedY);
-        Dibuixa(window, spritepilota, spriteplayer, blocs);
 
 
         if (PilotaRaqueta(spritepilota, spriteplayer)) {
@@ -98,6 +106,8 @@ int main() {
             FloatRect blocBounds = it->getGlobalBounds();
             if (ballBounds.intersects(blocBounds)) {
                 it = blocs.erase(it);
+                punts += 5;
+                PuntsMarcador.setString("Punts: " + std::to_string(punts));
             }
             else {
                 ++it;
@@ -106,15 +116,16 @@ int main() {
 
         if (spritepilota.getPosition().y >= y_max) {
             bolaSpeedY = -bolaSpeedY;
-            gameOverText.setPosition(viewSize.x / 2, viewSize.y / 2);
-            window.draw(gameOverText);
+            GameOverMarcador.setPosition(viewSize.x / 2, viewSize.y / 2);
+            window.draw(GameOverMarcador);
             window.display();
             while (window.pollEvent(event)) {}
         }
 
+        Dibuixa(window, spritepilota, spriteplayer, blocs, PuntsMarcador);
 
     }
-    
+
 
     return 0;
 }
