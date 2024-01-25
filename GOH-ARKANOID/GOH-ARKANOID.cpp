@@ -74,11 +74,11 @@ int main() {
         sf::Time dt = clock.restart();
         PilotaRebota(dt.asSeconds(), spritepilota, bolaSpeedX, bolaSpeedY);
 
-
+        //Aqui es carrega el codi que controla la colisio entre la pilota i el jugador.
         if (PilotaRaqueta(spritepilota, spriteplayer)) {
             bolaSpeedY = -bolaSpeedY;
         }
-
+        //Aqui es carrega el codi que controla la colisio entre la pilota i els blocs.
         for (auto& bloc : blocs) {
             if (spritepilota.getGlobalBounds().intersects(bloc.getGlobalBounds())) {
                 bolaSpeedY = -bolaSpeedY;
@@ -86,7 +86,7 @@ int main() {
         }
 
 
-        //Moviment
+        //Aqui hi ha tot el moviment del jugador, el qual nomes es pot moure d'esquerra a dreta amb les fletxes del teclat.
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
@@ -103,19 +103,21 @@ int main() {
             }
         }
 
+        //Aqui es on es crea la filera de blocs.
         for (auto it = blocs.begin(); it != blocs.end(); ) {
             FloatRect ballBounds = spritepilota.getGlobalBounds();
             FloatRect blocBounds = it->getGlobalBounds();
-            if (ballBounds.intersects(blocBounds)) {
+            if (ballBounds.intersects(blocBounds)) { //Si la pilota colisiona amb el bloc el bloc desapareix.
                 it = blocs.erase(it);
                 punts += 5;
-                PuntsMarcador.setString("Punts: " + std::to_string(punts));
+                PuntsMarcador.setString("Punts: " + std::to_string(punts)); //Si la pilota ha colisionat amb el bloc sumem 5 punts al marcador.
             }
             else {
                 ++it;
             }
         }
 
+        //Aquesta part gestiona el game over depenent de la posicio de la pilota
         if (spritepilota.getPosition().y >= y_max) {
             bolaSpeedY = -bolaSpeedY;
             GameOverMarcador.setPosition(viewSize.x / 2, viewSize.y / 2);
@@ -124,7 +126,7 @@ int main() {
             while (window.pollEvent(event)) {}
         }
 
-        Dibuixa(window, spritepilota, spriteplayer, blocs, PuntsMarcador);
+        Dibuixa(window, spritepilota, spriteplayer, blocs, PuntsMarcador); //I aqui es dibuixen totes les parts necessaries del joc.
 
     }
 
